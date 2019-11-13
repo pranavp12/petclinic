@@ -87,7 +87,7 @@ resource "aws_security_group_rule" "pvt_subnet_outbound_all" {
   type              = "egress"
   from_port         = 0
   to_port           = 0
-  protocol          = "tcp"
+  protocol          = "-1"
   security_group_id = "${aws_security_group.sg_pvt.id}"
   cidr_blocks       = ["0.0.0.0/0"]
   description       = "allow all outbound traffic from private subnet"
