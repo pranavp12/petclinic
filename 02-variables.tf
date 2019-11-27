@@ -1,5 +1,5 @@
 variable "aws_region" {
-  default = "us-east-2"
+  default = "eu-central-1"
 }
 
 variable "vpc_cidr" {
@@ -17,6 +17,7 @@ variable "public_subnet_cidr" {
 variable "amis" {
   default = {
      us-east-2 = "ami-0520e698dd500b1d1"
+     eu-central-1 = "ami-0d4c3eabb9e72650a"
  }
 }
 
