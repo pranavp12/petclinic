@@ -43,6 +43,16 @@ resource "aws_security_group_rule" "jenkins_server_from_source_ingress_webui" {
   description       = "jenkins server web"
 }
 
+resource "aws_security_group_rule" "jenkins_server_from_source_ingress_webui" {
+  type              = "ingress"
+  from_port         = 9090
+  to_port           = 9090
+  protocol          = "tcp"
+  security_group_id = "${aws_security_group.sg_pub.id}"
+  cidr_blocks       = ["0.0.0.0/0"]
+  description       = "jenkins server web"
+}
+
 resource "aws_security_group_rule" "jenkins_server_to_other_machines_ssh" {
   type              = "egress"
   from_port         = 22
