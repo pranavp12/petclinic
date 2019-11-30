@@ -43,7 +43,7 @@ resource "aws_security_group_rule" "jenkins_server_from_source_ingress_webui" {
   description       = "jenkins server web"
 }
 
-resource "aws_security_group_rule" "jenkins_server_from_source_ingress_webui" {
+resource "aws_security_group_rule" "jenkins_server_from_source_ingress_9090" {
   type              = "ingress"
   from_port         = 9090
   to_port           = 9090
