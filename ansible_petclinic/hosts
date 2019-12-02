@@ -1,0 +1,2 @@
+[petclinic]
+pvt_instance ansible_host=172.20.20.7

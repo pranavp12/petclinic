@@ -1,0 +1,11 @@
+---
+# tasks file for petclinic
+- name: Creates directory
+  file:
+    path: /mnt/artefact
+    state: directory
+
+- name: Ansible copy directory to the remote server
+  copy:
+    src: /mnt/artefact/spring-petclinic
+    dest: /mnt/artefact
