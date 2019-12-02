@@ -13,4 +13,3 @@ resource "aws_instance" "aws_ins_pub" {
         Name = "aws-ins-pub"
     }
 }
-
