@@ -5,6 +5,7 @@ sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 #sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 #sudo yum install -y jenkins
 #sudo chkconfig jenkins on
+#sudo service jenkins start
 wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 nohup java -jar jenkins.war --httpPort=9090 &
 
