@@ -5,8 +5,15 @@ sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 #sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 #sudo yum install -y jenkins
 #sudo chkconfig jenkins on
+#sudo chown -R jenkins:jenkins /var/lib/jenkins
+#sudo chown -R jenkins:jenkins /var/cache/jenkins
+#sudo chown -R jenkins:jenkins /var/log/jenkins
 #sudo service jenkins start
 wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+chown -R jenkins:jenkins /var/lib/jenkins
+chown -R jenkins:jenkins /var/cache/jenkins
+chown -R jenkins:jenkins /var/log/jenkins
+systemctl restart jenkins 
 nohup java -jar jenkins.war --httpPort=9090 &
 
 sudo yum install python3 -y
